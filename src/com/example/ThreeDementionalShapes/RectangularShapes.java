@@ -1,5 +1,7 @@
 package com.example.ThreeDementionalShapes;
 
+import java.awt.geom.RectangularShape;
+
 public abstract class RectangularShapes {
     private double edge1Length;
     private double edge2Length;
@@ -27,4 +29,7 @@ public abstract class RectangularShapes {
     public void setEdge2Length(double edge2Length) {
         this.edge2Length = edge2Length;
     }
+
+    public abstract void countP(RectangularShapes parallelepiped);
+    public abstract void countS(RectangularShapes parallelepiped);
 }

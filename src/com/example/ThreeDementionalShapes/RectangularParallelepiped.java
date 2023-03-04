@@ -1,9 +1,23 @@
 package com.example.ThreeDementionalShapes;
 
+import java.awt.geom.RectangularShape;
+
 public class RectangularParallelepiped extends RectangularShapes {
     private double diagonalsLength;
 
     public RectangularParallelepiped() {
+    }
+
+    @Override
+    public void countP(RectangularShapes parallelepiped) {
+        double parallelepipedP = (parallelepiped.getEdge1Length()*4)+(parallelepiped.getEdge2Length()*8);
+        System.out.println(parallelepipedP);
+    }
+    @Override
+    public void countS(RectangularShapes parallelepiped) {
+        double parallelepipedS = (parallelepiped.getEdge1Length()* parallelepiped.getEdge1Length()*2)+
+                (parallelepiped.getEdge1Length()* parallelepiped.getEdge2Length()*4);
+        System.out.println(parallelepipedS);
     }
 
     public RectangularParallelepiped(double diagonalsLength) {
@@ -21,18 +35,6 @@ public class RectangularParallelepiped extends RectangularShapes {
 
     public void setDiagonalsLength(double diagonalsLength) {
         this.diagonalsLength = diagonalsLength;
-    }
-
-    public void countParallelepipedP(RectangularParallelepiped parallelepiped){
-        //parallelepipedP-периметр параллелепипеда
-        double parallelepipedP = (parallelepiped.getEdge1Length()*4)+(parallelepiped.getEdge2Length()*8);
-        System.out.println(parallelepipedP);
-    }
-    public  void countParallelepipedS(RectangularParallelepiped parallelepiped){
-        //parallelepipedS-площадь параллелепипеда
-        double parallelepipedS = (parallelepiped.getEdge1Length()* parallelepiped.getEdge1Length()*2)+
-                (parallelepiped.getEdge1Length()* parallelepiped.getEdge2Length()*4);
-        System.out.println(parallelepipedS);
     }
 
     @Override

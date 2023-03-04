@@ -12,17 +12,20 @@ public class Cube extends RectangularShapes {
     public Cube(double edge1Length, double edge2Length) {
         super(edge1Length, edge2Length);
     }
-    public void countP(Cube cube){
-        //P-перимутр
-        double P = (cube.getEdge1Length()*12);
-        System.out.println(P);
-    }
-    public void countS(Cube cube){
-        //S-площадь
-        double S = cube.getEdge1Length()*cube.getEdge1Length()*6;
-        System.out.println(S);
+
+    @Override
+    public void countP(RectangularShapes parallelepiped) {
+        double parallelepipedP = (parallelepiped.getEdge1Length()*4)+(parallelepiped.getEdge2Length()*8);
+        System.out.println(parallelepipedP);
     }
 
+    @Override
+    public void countS(RectangularShapes parallelepiped) {
+        //S-площадь
+        double S = (parallelepiped.getEdge1Length()* parallelepiped.getEdge1Length()*2)+
+                (parallelepiped.getEdge1Length()* parallelepiped.getEdge2Length()*4);
+        System.out.println(S);
+    }
     @Override
     public String toString() {
         return "Cube{}";

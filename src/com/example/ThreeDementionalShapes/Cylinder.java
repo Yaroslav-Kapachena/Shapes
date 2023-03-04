@@ -24,6 +24,7 @@ public class Cylinder extends UnRectanngularShapes{
     }
 
     public void countCylinderV(Cylinder cylinder){
+        //V-объем
         double cylinderS = PI*cylinder.getRadius()* cylinder.getRadius();
         double cylinderV = cylinder.getHigh()*cylinderS;
         System.out.println(cylinderV);

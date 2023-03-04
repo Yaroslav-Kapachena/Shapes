@@ -24,6 +24,7 @@ public class Ball extends UnRectanngularShapes{
     }
 
     public void countBallV(Ball ball){
+        //V-объем
         double PIr3 = PI* ball.getRadius()* ball.getRadius()* ball.getRadius();
         double ballV = (4*PIr3)/4;
         System.out.println(ballV);
